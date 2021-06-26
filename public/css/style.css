@@ -1,0 +1,411 @@
+@font-face {
+  font-family: shrikhand;
+  src: url("../public/fonts/shrikhand/shrikhand-regular-webfont.eot") format("eot"), url("../public/fonts/shrikhand/shrikhand-regular-webfont.svg") format("svg"), url("../public/fonts/shrikhand/shrikhand-regular-webfont.ttf") format("ttf"), url("../public/fonts/shrikhand/shrikhand-regular-webfont.woff") format("woff"), url("../public/fonts/shrikhand/shrikhand-regular-webfont.woff2") format("woff2");
+  font-weight: bold;
+}
+@font-face {
+  font-family: roboto1;
+  src: local(Roboto-Black) url("../public/fonts/roboto/Roboto-Black.ttf") format("ttf");
+}
+@font-face {
+  font-family: roboto;
+  src: url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+}
+main {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: roboto;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+}
+@media screen and (max-width: 768px) {
+  header {
+    height: 4vh;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.reservation {
+  background-color: #f2f2f2;
+  text-align: center;
+}
+.reservation__localisation {
+  background-color: #e6e6e6;
+  min-height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: -2px 8px 5px -5px #bfbfbf inset;
+}
+.reservation .ville {
+  margin-left: 12px;
+}
+.reservation__title {
+  font-weight: 900;
+  font-size: 4vw;
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+}
+.reservation__p {
+  font-size: 3vw;
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media screen and (max-width: 768px) {
+  .reservation__p {
+    font-size: 4vw;
+    width: 90%;
+  }
+}
+.reservation__button {
+  background-color: #9356DC;
+  height: 55px;
+  width: 15vw;
+  font-size: 13px;
+  min-width: 190px;
+  font-weight: 700;
+  color: white;
+  border: none;
+  border-radius: 40px;
+  margin-bottom: 6vh;
+}
+@media screen and (max-width: 768px) {
+  .reservation__button {
+    margin-top: 18px;
+    height: 34px;
+    font-size: 12px;
+    min-width: 172px;
+    font-weight: 700;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.fonctionnement__bloc {
+  height: 60px;
+  width: 70vw;
+  max-width: 300px;
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+.fonctionnement__bloc .icone__fonctionnement {
+  position: absolute;
+  left: 33px;
+}
+@media screen and (max-width: 768px) {
+  .fonctionnement__bloc .icone__fonctionnement {
+    left: 12%;
+  }
+}
+.fonctionnement__bloc .fonctionnement .number, .fonctionnement .fonctionnement__bloc .number {
+  background-color: #9356DC;
+  padding: 3px 8px 0px 8px;
+  height: 19px;
+  font-size: bold;
+  font-weight: 500;
+  color: white;
+  border-radius: 50%;
+  position: absolute;
+  left: -10px;
+}
+
+.fonctionnement {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-weight: bold;
+  font-size: 13px;
+}
+.fonctionnement h2 {
+  align-self: flex-start;
+  margin-left: 6%;
+}
+@media screen and (max-width: 768px) {
+  .fonctionnement h2 {
+    margin-left: 2vw;
+  }
+}
+.restaurants {
+  background-color: #f2f2f2;
+  padding-left: 6%;
+  padding-right: 6%;
+  padding-top: 40px;
+  padding-bottom: 15px;
+}
+@media screen and (max-width: 768px) {
+  .restaurants {
+    padding-top: 13px;
+    padding-bottom: 5px;
+  }
+}
+.restaurants h2 {
+  margin-left: 0%;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 768px) {
+  .restaurants h2 {
+    margin-bottom: 17px;
+  }
+}
+.restaurants__blocImage {
+  border-radius: 20px;
+  background-color: white;
+  padding-bottom: 4px;
+  margin-bottom: 22px;
+}
+.restaurants__blocImage--dessus {
+  position: relative;
+}
+.restaurants__blocImage--dessus .image {
+  border-radius: 20px 20px 0 0;
+  width: 100%;
+  height: 25em;
+  object-fit: cover;
+}
+@media screen and (max-width: 768px) {
+  .restaurants__blocImage--dessus .image {
+    height: 140px;
+    width: 100%;
+    object-fit: unset;
+  }
+}
+.restaurants__blocImage--dessus .nouveau {
+  position: absolute;
+  background-color: #99E2D0;
+  padding: 4px 10px;
+  right: 30px;
+  top: 30px;
+  color: #27a980;
+}
+@media screen and (max-width: 768px) {
+  .restaurants__blocImage--dessus .nouveau {
+    right: 10px;
+    top: 10px;
+  }
+}
+.restaurants__blocImage--dessous {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 30px;
+}
+@media screen and (max-width: 768px) {
+  .restaurants__blocImage--dessous {
+    height: 7vh;
+  }
+}
+.restaurants__blocImage--dessous .title_p {
+  line-height: 6px;
+  font-size: 13px;
+}
+@media screen and (max-width: 768px) {
+  .restaurants__blocImage--dessous .title_p {
+    margin-left: -20px;
+  }
+}
+
+footer {
+  background-color: black;
+  color: white;
+  padding-left: 3%;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  margin-bottom: 50px;
+}
+footer .title {
+  margin-left: 40px;
+  margin-bottom: 0%;
+  font-family: shrikhand;
+}
+@media screen and (max-width: 768px) {
+  footer .title {
+    margin-left: 4%;
+  }
+}
+footer ul {
+  margin-top: 10px;
+  list-style: none;
+}
+footer ul .fas {
+  font-size: 10px;
+  padding-right: 4px;
+}
+@media screen and (max-width: 768px) {
+  footer ul {
+    padding-left: 0px;
+    margin-left: 4%;
+  }
+}
+
+.menu__section--3 .meal, .menu__section--2 .meal, .menu__section--1 .meal {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  .menu__section--3 .meal, .menu__section--2 .meal, .menu__section--1 .meal {
+    width: 76vw;
+  }
+}
+.menu__section--3 .meal .price, .menu__section--2 .meal .price, .menu__section--1 .meal .price {
+  position: absolute;
+  right: 1vw;
+  bottom: 2vh;
+}
+
+.header__page .arrowImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+  width: 100%;
+}
+.header__page img {
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+}
+@media screen and (max-width: 768px) {
+  .header__page img {
+    height: 4vh;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+.header__page .arrow {
+  position: absolute;
+  left: 5%;
+}
+
+.image__dessousHeader img {
+  width: 100%;
+  height: 50vh;
+  object-fit: contain;
+}
+@media screen and (max-width: 768px) {
+  .image__dessousHeader img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+  }
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #f2f2f2;
+}
+@media screen and (max-width: 768px) {
+  .menu {
+    margin-top: -2vh;
+    border-radius: 20px 20px 0px 0px;
+    width: auto;
+  }
+}
+.menu__title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  height: 80px;
+}
+.menu__title h1 {
+  position: absolute;
+  left: 2vw;
+}
+.menu__title i {
+  position: absolute;
+  right: 5vw;
+}
+.menu__section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .menu__section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+.menu__section--1 {
+  width: 100%;
+  max-width: 350px;
+}
+@media screen and (max-width: 768px) {
+  .menu__section--1 {
+    width: 100%;
+  }
+}
+.menu__section--2 {
+  width: 100%;
+  max-width: 350px;
+}
+@media screen and (max-width: 768px) {
+  .menu__section--2 {
+    width: 100%;
+  }
+}
+.menu__section--3 {
+  width: 100%;
+  max-width: 350px;
+}
+@media screen and (max-width: 768px) {
+  .menu__section--3 {
+    width: 100%;
+  }
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 13vh;
+}
+.button__commande {
+  background-color: #9356DC;
+  height: 55px;
+  width: 15vw;
+  max-width: 100px;
+  font-size: 13px;
+  min-width: 190px;
+  font-weight: 700;
+  color: white;
+  border: none;
+  border-radius: 40px;
+}
+@media screen and (max-width: 768px) {
+  .button__commande {
+    margin-top: 18px;
+    height: 34px;
+    font-size: 12px;
+    min-width: 172px;
+    font-weight: 700;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

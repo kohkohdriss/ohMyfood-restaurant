@@ -1,0 +1,435 @@
+//font-face
+@font-face {
+  font-family:shrikhand;
+  src: url("../public/fonts/shrikhand/shrikhand-regular-webfont.eot") format('eot') ,
+      url('../public/fonts/shrikhand/shrikhand-regular-webfont.svg') format('svg') ,
+      url('../public/fonts/shrikhand/shrikhand-regular-webfont.ttf') format('ttf') ,
+      url('../public/fonts/shrikhand/shrikhand-regular-webfont.woff') format('woff') ,
+      url('../public/fonts/shrikhand/shrikhand-regular-webfont.woff2') format('woff2');
+      font-weight: bold;
+
+}
+@font-face {
+  font-family: roboto1;
+  src: local(Roboto-Black) url("../public/fonts/roboto/Roboto-Black.ttf") format('ttf');
+  
+}
+
+@font-face {
+  font-family: roboto;
+  src: url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap') ;
+  
+}
+
+
+//variables 
+@import "./utils/variables";
+
+$font-family-title:shrikhand;
+
+
+main{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: roboto;
+ 
+}
+
+@mixin marginLR {
+  margin-right: auto;
+  margin-left: auto; 
+}
+
+$breakpoints: (
+  mobile: 768px
+);
+@mixin mobile-only {
+  @media screen and (max-width: map-get($breakpoints, mobile)){
+     @content;
+  }
+}
+//header, ya le logo ohmyfood
+header{
+  display: flex;
+  justify-content: center;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  @include mobile-only{
+    height: 4vh;
+    @include marginLR;
+}
+ 
+}
+//section de reservation
+.reservation{
+          background-color: $colour-quaternary;
+          text-align: center;
+
+      &__localisation{
+            background-color:$colour-quinary;
+            min-height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow:-2px 8px 5px -5px #bfbfbf inset;
+          }
+          .ville{
+          margin-left:12px;
+          }
+          &__title{
+            font-weight:900;
+           font-size: 4vw;
+           width: 80%;
+          @include marginLR;
+          }
+          &__p{
+            font-size: 3vw;
+            width: 90%;
+            @include marginLR;
+            @include mobile-only{
+              font-size: 4vw;
+              width: 90%;
+          }
+            
+          }
+          &__button{
+            background-color: $colour-primary;
+            height: 55px;
+            width: 15vw;
+            font-size: 13px;
+            min-width: 190px;
+            font-weight: 700;
+            color: white;
+            border: none;
+            border-radius: 40px;
+            margin-bottom: 6vh;
+            @include mobile-only{
+              margin-top: 18px;
+              height: 34px;
+              font-size: 12px;
+              min-width: 172px;
+              font-weight: 700;
+              @include marginLR;
+             
+          }
+         
+        
+          }
+        
+}
+
+//section de fonctionnement
+%bloc__focntionnement{
+  height: 60px;
+  width:70vw;
+  max-width: 300px;
+  background-color:$colour-quaternary;
+  display: flex;
+  justify-content:space-evenly;
+  align-items: center;
+  position: relative;
+  border-radius: 20px; 
+  margin-bottom:20px;
+  .icone__fonctionnement {
+    position: absolute;
+    left: 33px;
+    @include mobile-only{
+      left: 12%;
+      
+    }
+  }
+%number__fonctionnement{
+  background-color: $colour-primary;
+  padding: 3px 8px 0px 8px;
+  height: 19px;
+  font-size: bold;
+  font-weight: 500;
+  color: white;
+  border-radius: 50%;
+  position: absolute;
+  left: -10px;  
+}
+}
+.fonctionnement{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-weight:bold;
+        font-size: 13px;
+
+        h2{
+         align-self: flex-start;
+         margin-left: 6%;
+         @include mobile-only{
+          margin-left: 2vw;
+        }
+        }
+       
+        
+        &__bloc{
+         @extend %bloc__focntionnement;
+        }
+        .number{
+          @extend %number__fonctionnement;
+        }  
+}
+//section restaurants     
+.restaurants{
+  background-color:$colour-quaternary;
+  padding-left: 6%;
+  padding-right: 6%;
+  padding-top: 40px;
+  padding-bottom: 15px;
+  @include mobile-only{
+    padding-top: 13px;
+    padding-bottom: 5px;
+  }
+  
+          h2{
+            margin-left: 0%;
+            margin-bottom: 20px;
+            @include mobile-only{
+              margin-bottom: 17px;
+            }
+          }
+          &__blocImage{
+                        border-radius: 20px;
+                        background-color: white;
+                        padding-bottom: 4px;
+                        margin-bottom: 22px;
+                       &--dessus{
+                           position: relative;
+                           .image{
+                            border-radius: 20px 20px 0  0  ;
+                            width: 100%;
+                            height:25em;
+                            object-fit:cover;
+                            @include mobile-only{
+                            height: 140px;
+                            width:100%;
+                            object-fit:unset;
+                            }
+
+                           }
+                           .nouveau{
+                                position: absolute;
+                                background-color: $colour-tertiary;
+                                padding: 4px 10px;
+                                right: 30px;
+                                top: 30px;
+                                color:rgb(39, 169, 128); 
+                                @include mobile-only{
+                                  right: 10px;
+                                  top: 10px;
+                                }
+                                  }
+                             }
+                        &--dessous{
+                              display: flex;
+                              flex-direction: row;
+                              align-items:center;
+                              justify-content: space-between;
+                              padding: 0px 30px ;
+                              @include mobile-only{
+                               height: 7vh;
+                                }
+                                .title_p{
+                                  line-height: 6px;
+                                  font-size: 13px;
+                                  @include mobile-only{
+                                    margin-left:-20px;
+                                     }
+                                  
+                                }
+                                   }
+                       }
+         
+}
+//pied de la page
+
+footer{
+        background-color: black;
+        color: white;
+        padding-left: 3%;
+        padding-top: 15px;
+        padding-bottom: 10px;
+        margin-bottom: 50px;
+  .title{
+        margin-left: 40px;
+        margin-bottom: 0%;
+        font-family:shrikhand;
+        @include mobile-only{
+          margin-left: 4%;
+        }
+        
+        
+        }
+
+      ul{
+        margin-top: 10px;
+        list-style:none;
+        .fas{
+          font-size:10px;
+          padding-right: 4px;
+        }
+        @include mobile-only{
+          padding-left: 0px;
+          margin-left: 4%;
+        }
+      }
+}
+
+//page A la francaise 
+$withSmallSection:350px;
+
+%descriptionPrice{
+  .meal{
+    display: flex;
+    flex-direction: row;
+    width:100%;
+    position: relative;
+    @include mobile-only{
+      width: 76vw;
+    }
+    .price{
+      position: absolute;
+      right: 1vw;
+      bottom: 2vh;  
+    }
+    
+  }
+}
+
+.header__page{ 
+        .arrowImage{
+          display: flex;
+          justify-content:center;
+          align-items: center;
+          @include marginLR;
+          position: relative;
+          width: 100%;
+         
+                  }
+                  img{
+                    margin-top: 2vh;
+                    margin-bottom: 2vh;
+                    @include mobile-only{
+                      height: 4vh;
+                      @include marginLR;
+                  }
+                  
+                  }
+                  .arrow{
+                      position: absolute; 
+                      left: 5%;
+
+                  } 
+}
+.image__dessousHeader{
+                   img{
+                     width: 100%;
+                    
+                     height: 50vh;
+                     object-fit:contain; 
+                     @include mobile-only{
+                      width: 100%;
+                      height: 220px;
+                      object-fit: cover;
+                      
+                   }
+                   }
+}
+
+.menu{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background-color: $colour-quaternary;
+        @include mobile-only{
+          margin-top: -2vh;
+          border-radius: 20px 20px 0px 0px ;
+          width: auto;
+       }
+        
+        &__title{
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          position: relative;
+          height: 80px;
+          h1{
+            position: absolute;
+            left: 2vw;
+          }
+          i{
+            position: absolute;
+            right: 5vw;
+          }
+        }
+        &__section{
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+          width: 100%;
+          @include mobile-only{
+              display: flex;
+              flex-direction: column;
+              width: 100%;
+        }
+          &--1{
+            width:100%;
+            max-width: $withSmallSection;
+            @extend %descriptionPrice;
+            @include mobile-only{
+             width: 100%;
+          }
+          }
+          &--2{
+            width: 100%;
+            max-width: $withSmallSection;
+            @extend %descriptionPrice;
+            @include mobile-only{
+              width: 100%;
+           }
+          }
+          &--3{
+            width: 100%;
+            max-width: $withSmallSection;
+            @extend %descriptionPrice;
+            @include mobile-only{
+              width: 100%;
+           }
+          }
+        }
+
+}
+.button{ 
+           display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 13vh;
+          &__commande{
+          background-color: $colour-primary;
+            height: 55px;
+            width: 15vw;
+            max-width: 100px;
+            font-size: 13px;
+            min-width: 190px;
+            font-weight: 700;
+            color: white;
+            border: none;
+            border-radius: 40px;
+            @include mobile-only{
+              margin-top: 18px;
+              height: 34px;
+              font-size: 12px;
+              min-width: 172px;
+              font-weight: 700;
+              @include marginLR;
+            } 
+          }
+
+}
