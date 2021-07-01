@@ -9,8 +9,68 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Shrikhand' rel='stylesheet'>
     <title>ohmyfood food restaurant </title>
+
+    <style>
+      .loaderBack{
+       width: 100%;
+       height: 100%;
+        position: fixed;
+        z-index: 2;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        background-color: aqua;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        animation: time 999999s 1s ease-in-out;
+        
+      }
+      .loader {
+       
+        border: 16px solid #f3f3f3;
+        border-radius: 50%;
+        border-top: 16px solid #3498db;
+        width: 120px;
+        height: 120px;
+        animation: spin 1s linear 1;
+        
+        
+      }
+
+      @keyframes time{
+        0% { 
+          position: absolute;
+         top: -9999px;
+          left: -9999px;
+          
+        }
+       100% {
+        
+               opacity: 0;
+        }
+      }
+    
+      
+      @keyframes spin {
+        0% { transform: rotate(0deg);
+          
+              
+              }
+        100% { transform: rotate(360deg);
+
+           
+        }
+      }
+      </style>
 </head> 
 <body>
+  <div class="loaderBack">
+    <div class="loader"></div>
+  </div>
+  
 <main class="main_menu">
     <!--Header-->
           <header>
