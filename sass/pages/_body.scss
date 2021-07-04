@@ -1,0 +1,147 @@
+//section de reservation
+.reservation{
+    background-color: $colour-quaternary;
+    text-align: center;
+
+&__localisation{
+      background-color:$colour-quinary;
+      min-height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow:-2px 8px 5px -5px #bfbfbf inset;
+    }
+    .ville{
+    margin-left:12px;
+    }
+    &__title{
+      font-weight:900;
+     font-size: 7vw;
+     width: 80%;
+    @include marginLR;
+    }
+    &__p{
+      font-size: 3vw;
+      width: 90%;
+      @include marginLR;
+      @include mobile-only{
+        font-size: 4vw;
+        width: 90%;
+    }
+
+    }
+    &__button {
+      @extend %buttonExploreRestarants;
+    }
+  
+}
+
+
+
+
+//section fonctionnement 
+.fonctionnement{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-weight:bold;
+  font-size: 13px;
+
+  h2{
+   align-self: flex-start;
+   margin-left: 6%;
+   @include mobile-only{
+    margin-left: 2vw;
+  }
+  }
+ 
+  
+  &__bloc{
+   @extend %bloc__focntionnement;
+  }
+  .number{
+    @extend %number__fonctionnement;
+  }  
+}
+
+//section restaurants     
+.restaurants{
+  background-color:$colour-quaternary;
+  padding-left: 6%;
+  padding-right: 6%;
+  padding-top: 40px;
+  padding-bottom: 15px;
+  @include mobile-only{
+    padding-top: 13px;
+    padding-bottom: 5px;
+  }
+  
+          h2{
+            margin-left: 0%;
+            margin-bottom: 20px;
+            @include mobile-only{
+              margin-bottom: 17px;
+            }
+          }
+          &__blocImage{
+                        border-radius: 20px;
+                        background-color: white;
+                        padding-bottom: 4px;
+                        margin-bottom: 22px;
+                        box-shadow: 3px 3px 14px $colour-senary;
+                       &--dessus{
+                           position: relative;
+                           .image{
+                            border-radius: 20px 20px 0  0  ;
+                            width: 100%;
+                            height:25em;
+                            object-fit:cover;
+                            @include mobile-only{
+                            height: 140px;
+                            width:100%;
+                            object-fit:cover;
+                            }
+
+                           }
+                           .nouveau{
+                                position: absolute;
+                                background-color: $colour-tertiary;
+                                padding: 3px 5px;
+                                font-size: 13px;
+                                right: 30px;
+                                top: 30px;
+                                color:rgb(39, 169, 128); 
+                                @include mobile-only{
+                                  right: 10px;
+                                  top: 10px;
+                                }
+                                  }
+                             }
+                        &--dessous{
+                              display: flex;
+                              flex-direction: row;
+                              align-items:center;
+                              justify-content: space-between;
+                              padding: 0px 30px ;
+                              @extend %colorHeart;
+                              @include mobile-only{
+                               height: 7vh;
+                                }
+                                .title_p{
+                                  line-height: 6px;
+                                  font-size: 13px;
+                                  @include mobile-only{
+                                    margin-left:-20px;
+                                     }
+                                  
+                                  
+                                }
+                                   }
+                       }
+         
+}
+
+.meal__animation{
+  visibility: hidden;
+}

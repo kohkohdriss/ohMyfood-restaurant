@@ -5,12 +5,20 @@ $colour-quaternary:#f2f2f2;
 $colour-quinary:#e6e6e6;
 $colour-senary:#bfbfbf;
 
+$font-family-title:shrikhand;
+
+
+$withSmallSection:350px;
+
+$durationChildMeal:150ms;
+
+
+$breakpoints: (
+  mobile: 768px
+);
 
 
 
 
 
 
-$heading-shadow-size: .55rem;
-$layout-margin: 6rem;
-$grid-gutter: $layout-margin * .25;

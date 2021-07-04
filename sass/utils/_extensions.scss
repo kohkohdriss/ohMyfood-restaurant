@@ -1,0 +1,179 @@
+%bloc__focntionnement{
+  height: 60px;
+  width:70vw;
+  max-width: 300px;
+  background-color:$colour-quaternary;
+  display: flex;
+  justify-content:space-evenly;
+  align-items: center;
+  position: relative;
+  border-radius: 20px; 
+  margin-bottom:20px;
+  box-shadow: 3px 3px 14px $colour-senary;
+  z-index: 1;
+  &:hover {
+    &::after {
+        opacity: 1;
+}
+}
+&::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 20px;
+    background: radial-gradient(farthest-corner, lighten($colour-primary,33) 100%, darken($colour-primary, 10) 100%);
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 250ms;
+} 
+  
+
+  .icone__fonctionnement {
+    position: absolute;
+    left: 33px;
+    @include mobile-only{
+      left: 12%;
+      
+    }
+  }
+%number__fonctionnement{
+  background-color: $colour-primary;
+  padding: 3px 8px 0px 8px;
+  height: 19px;
+  font-weight: 500;
+  color: white;
+  border-radius: 50%;
+  position: absolute;
+  left: -10px;  
+}
+}
+
+
+
+//color heart big title 
+%colorHeart{
+    .heart{
+      position: relative;
+      right: 10px;
+     
+      .far{
+        position: absolute;
+        z-index: 0;
+        }
+        .fa{
+          position: absolute;
+          color:#11ffee00;
+          z-index: 1;
+          cursor: pointer;
+          &:hover{
+            z-index: 1;
+            cursor: pointer;
+            color: $colour-primary;
+            animation: heartColor 1.5s ease-out;
+            
+          }
+        }
+        
+  }
+  }
+
+  //extend to color heart in menu
+%colorHeartMenu{
+    .heart{
+      position: absolute;
+      right: 11vw;
+      bottom: 70px;
+      font-size: 30px;
+      @include mobile-only{
+        right: 62px;
+        bottom: 38px;
+        font-size: 24px;
+      }
+     
+      .far{
+        position: absolute;
+        z-index: 0;
+        }
+        .fa{
+          position: absolute;
+          z-index: 1;
+          cursor: pointer;
+         color:#11ffee00;
+          &:hover{
+            z-index: 1;
+            color: $colour-primary;
+            animation: heartColor 1.5s ease-out;
+          
+          }
+        }
+        
+  }
+  }
+
+
+  
+%descriptionPrice{
+    .mealAll{
+       .mealAnim{
+       
+        &:nth-child(1){
+          @include childMealAnimation;
+          animation-delay:$durationChildMeal*0;
+          
+          
+        }
+        &:nth-child(2){
+          @include childMealAnimation;
+          animation-delay:$durationChildMeal*2;
+         
+        }
+        &:nth-child(3){
+          @include childMealAnimation;
+          animation-delay:$durationChildMeal*3;
+         
+        }
+        &:nth-child(4){
+          @include childMealAnimation;
+          animation-delay:$durationChildMeal*4;
+        }
+              .meal{
+                display: flex;
+                flex-direction: row;
+                position: relative;
+                justify-content: space-between;
+                width: 94%;
+                @include marginLR();
+                box-shadow: 2px 2px grey;
+                padding-right: 5px;
+                padding-left: 5px;
+                border-radius: 10px;
+                .description{
+                  width: 90%;
+                  h3{
+                    overflow: hidden;
+                      text-overflow: ellipsis;
+                      white-space:nowrap;
+                      width: 100%;
+                  }
+                  p{
+                    overflow: hidden;
+                    line-height: 14px;
+                    width: 100%;
+                    text-overflow: ellipsis;
+                    white-space:nowrap;
+                  }
+                }
+                .price{
+                padding-top: 58px;
+    
+                  white-space: nowrap; 
+                  display: block;
+                }
+              }
+            }
+    }}
+    
+    

@@ -1,0 +1,61 @@
+@keyframes progress-bar {
+    0% {
+        transform: scaley(0);
+    }
+    33% {
+        transform: scaley(.66);
+   
+    }
+    66% {
+      transform: scaley(.99);
+  
+  }
+     100% {
+        transform: scaley(1);
+    }
+  }
+
+
+
+  @keyframes heartColor{
+    0% {
+        transform: scaleY(0);
+        transform-origin: bottom;
+    }
+    100% {
+        transform: scaleY(1);
+    }
+  }
+
+
+  @keyframes meal{
+    0% {
+        left: -100px;
+    }
+    100% {
+        transform: 0px;
+        }
+    }
+
+
+    @keyframes time{
+        0% { 
+          position: absolute;
+         top: -9999px;
+          left: -9999px;
+          
+        }
+       100% {
+        
+               opacity: 0;
+        }
+      }
+    
+      
+      @keyframes spin {
+        0% { transform: rotate(0deg);
+              
+              }
+        100% { transform: rotate(360deg);
+        }
+      }

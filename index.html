@@ -10,61 +10,6 @@
     <link href='https://fonts.googleapis.com/css?family=Shrikhand' rel='stylesheet'>
     <title>ohmyfood food restaurant </title>
 
-    <style>
-      .loaderBack{
-       width: 100%;
-       height: 100%;
-        position: fixed;
-        z-index: 2;
-        top: 0px;
-        left: 0px;
-        right: 0px;
-        bottom: 0px;
-        background-color: aqua;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        
-        animation: time 999999s 1s ease-in-out;
-        
-      }
-      .loader {
-       
-        border: 16px solid #f3f3f3;
-        border-radius: 50%;
-        border-top: 16px solid #3498db;
-        width: 120px;
-        height: 120px;
-        animation: spin 1s linear 1;
-        
-        
-      }
-
-      @keyframes time{
-        0% { 
-          position: absolute;
-         top: -9999px;
-          left: -9999px;
-          
-        }
-       100% {
-        
-               opacity: 0;
-        }
-      }
-    
-      
-      @keyframes spin {
-        0% { transform: rotate(0deg);
-          
-              
-              }
-        100% { transform: rotate(360deg);
-
-           
-        }
-      }
-      </style>
 </head> 
 <body>
   <div class="loaderBack">
@@ -80,7 +25,7 @@
           <div class="reservation">
                   <div class="reservation__localisation">
                         <i class="fas fa-map-marker-alt"></i>
-                        <span class="ville">Paris, Bellville</span>
+                        <span class="ville"><a href="">Paris, Bellville</a></span>
                   </div>
                   <h2 class="reservation__title">Réservez le menu qui vous convient</h2>
                   <p class="reservation__p">Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
@@ -191,7 +136,7 @@
           Devenir partenaire
         </li>
         <li>Mentions légales</li>
-        <li>Contact</li>
+        <li><a href="mailto:kohkoh.driss@gmail.com">Contact</a></li>
       </ul>
     </footer>
           

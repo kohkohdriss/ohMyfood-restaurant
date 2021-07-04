@@ -1,0 +1,35 @@
+
+//header pages menu
+.header__page{ 
+    .arrowImage{
+      display: flex;
+      justify-content:center;
+      align-items: center;
+      @include mobile-only{
+       height:2em;
+      }
+      @include marginLR;
+      width: 100%;
+              }
+              img{
+                margin-top: 1vh;
+                padding-top: 3vh;
+                margin-bottom: 2vh;
+                @include mobile-only{
+                  height: 4vh;
+                  @include marginLR;
+              }
+              
+              }
+              .arrow{
+                  position: absolute; 
+                  font-size: 18px;
+                  color: black;
+                  left:18%;
+                  @include mobile-only{
+                    left: 30px;
+                    font-size: 16px;
+                  }
+
+              } 
+}

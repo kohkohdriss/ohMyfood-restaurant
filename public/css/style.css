@@ -1,7 +1,57 @@
+@keyframes progress-bar {
+  0% {
+    transform: scaley(0);
+  }
+  33% {
+    transform: scaley(0.66);
+  }
+  66% {
+    transform: scaley(0.99);
+  }
+  100% {
+    transform: scaley(1);
+  }
+}
+@keyframes heartColor {
+  0% {
+    transform: scaleY(0);
+    transform-origin: bottom;
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+@keyframes meal {
+  0% {
+    left: -100px;
+  }
+  100% {
+    transform: 0px;
+  }
+}
+@keyframes time {
+  0% {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .main_menu {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 10px;
   font-family: roboto, sans-serif;
 }
 .main_menu a {
@@ -22,80 +72,49 @@ header {
   }
 }
 
-.reservation {
-  background-color: #f2f2f2;
-  text-align: center;
-}
-.reservation__localisation {
-  background-color: #e6e6e6;
-  min-height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: -2px 8px 5px -5px #bfbfbf inset;
-}
-.reservation .ville {
-  margin-left: 12px;
-}
-.reservation__title {
-  font-weight: 900;
-  font-size: 4vw;
-  width: 80%;
-  margin-right: auto;
-  margin-left: auto;
-}
-.reservation__p {
-  font-size: 3vw;
-  width: 90%;
-  margin-right: auto;
-  margin-left: auto;
-}
-@media screen and (max-width: 768px) {
-  .reservation__p {
-    font-size: 4vw;
-    width: 90%;
-  }
-}
-.reservation__button {
-  background-color: #9356DC;
-  height: 58px;
-  width: 15vw;
-  font-size: 18px;
-  min-width: 270px;
-  font-weight: 700;
+footer {
+  background-color: black;
   color: white;
-  border: none;
-  border-radius: 40px;
-  margin-bottom: 0vh;
-  position: relative;
-  z-index: 1;
-}
-.reservation__button:hover::after {
-  opacity: 1;
-}
-.reservation__button::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  border-radius: 40px;
-  background: radial-gradient(farthest-corner, #fface8 1%, #9052db 100%);
-  opacity: 0;
-  z-index: -1;
-  transition: opacity 250ms;
+  padding-left: 3%;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  margin-bottom: 50px;
 }
 @media screen and (max-width: 768px) {
-  .reservation__button {
-    margin-top: 18px;
-    height: 34px;
-    font-size: 12px;
-    min-width: 172px;
-    font-weight: 700;
-    margin-right: auto;
-    margin-left: auto;
+  footer {
+    padding-left: 4%;
+    margin-bottom: 10px;
+    font-size: 18px;
+    line-height: 26px;
+    height: 170px;
   }
+}
+footer .title {
+  margin-left: 40px;
+  margin-bottom: 0%;
+  font-family: shrikhand;
+}
+@media screen and (max-width: 768px) {
+  footer .title {
+    margin-left: 4%;
+  }
+}
+footer ul {
+  margin-top: 10px;
+  list-style: none;
+}
+footer ul .fas {
+  font-size: 10px;
+  padding-right: 4px;
+}
+@media screen and (max-width: 768px) {
+  footer ul {
+    padding-left: 0px;
+    margin-left: 4%;
+  }
+}
+footer ul a {
+  color: white;
 }
 
 .fonctionnement__bloc {
@@ -109,6 +128,7 @@ header {
   position: relative;
   border-radius: 20px;
   margin-bottom: 20px;
+  box-shadow: 3px 3px 14px #bfbfbf;
   z-index: 1;
 }
 .fonctionnement__bloc:hover::after {
@@ -147,32 +167,6 @@ header {
   left: -10px;
 }
 
-.fonctionnement {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  font-weight: bold;
-  font-size: 13px;
-}
-.fonctionnement h2 {
-  align-self: flex-start;
-  margin-left: 6%;
-}
-@media screen and (max-width: 768px) {
-  .fonctionnement h2 {
-    margin-left: 2vw;
-  }
-}
-@keyframes heartColor {
-  0% {
-    transform: scaleY(0);
-    transform-origin: bottom;
-  }
-  100% {
-    transform: scaleY(1);
-  }
-}
 .restaurants__blocImage--dessous .heart {
   position: relative;
   right: 10px;
@@ -185,9 +179,11 @@ header {
   position: absolute;
   color: #11ffee00;
   z-index: 1;
+  cursor: pointer;
 }
 .restaurants__blocImage--dessous .heart .fa:hover {
   z-index: 1;
+  cursor: pointer;
   color: #9356DC;
   animation: heartColor 1.5s ease-out;
 }
@@ -212,14 +208,275 @@ header {
 .menu__BigTitle .heart .fa {
   position: absolute;
   z-index: 1;
+  cursor: pointer;
   color: #11ffee00;
 }
 .menu__BigTitle .heart .fa:hover {
   z-index: 1;
   color: #9356DC;
-  animation: heartColor 1s ease-out;
+  animation: heartColor 1.5s ease-out;
 }
 
+.menu__section--3 .mealAll .mealAnim:nth-child(1), .menu__section--2 .mealAll .mealAnim:nth-child(1), .menu__section--1 .mealAll .mealAnim:nth-child(1) {
+  animation: progress-bar 150ms ease;
+  animation-fill-mode: both;
+  transform-origin: top;
+  animation-delay: 0ms;
+}
+.menu__section--3 .mealAll .mealAnim:nth-child(2), .menu__section--2 .mealAll .mealAnim:nth-child(2), .menu__section--1 .mealAll .mealAnim:nth-child(2) {
+  animation: progress-bar 150ms ease;
+  animation-fill-mode: both;
+  transform-origin: top;
+  animation-delay: 300ms;
+}
+.menu__section--3 .mealAll .mealAnim:nth-child(3), .menu__section--2 .mealAll .mealAnim:nth-child(3), .menu__section--1 .mealAll .mealAnim:nth-child(3) {
+  animation: progress-bar 150ms ease;
+  animation-fill-mode: both;
+  transform-origin: top;
+  animation-delay: 450ms;
+}
+.menu__section--3 .mealAll .mealAnim:nth-child(4), .menu__section--2 .mealAll .mealAnim:nth-child(4), .menu__section--1 .mealAll .mealAnim:nth-child(4) {
+  animation: progress-bar 150ms ease;
+  animation-fill-mode: both;
+  transform-origin: top;
+  animation-delay: 600ms;
+}
+.menu__section--3 .mealAll .mealAnim .meal, .menu__section--2 .mealAll .mealAnim .meal, .menu__section--1 .mealAll .mealAnim .meal {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  justify-content: space-between;
+  width: 94%;
+  margin-right: auto;
+  margin-left: auto;
+  box-shadow: 2px 2px grey;
+  padding-right: 5px;
+  padding-left: 5px;
+  border-radius: 10px;
+}
+.menu__section--3 .mealAll .mealAnim .meal .description, .menu__section--2 .mealAll .mealAnim .meal .description, .menu__section--1 .mealAll .mealAnim .meal .description {
+  width: 90%;
+}
+.menu__section--3 .mealAll .mealAnim .meal .description h3, .menu__section--2 .mealAll .mealAnim .meal .description h3, .menu__section--1 .mealAll .mealAnim .meal .description h3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+}
+.menu__section--3 .mealAll .mealAnim .meal .description p, .menu__section--2 .mealAll .mealAnim .meal .description p, .menu__section--1 .mealAll .mealAnim .meal .description p {
+  overflow: hidden;
+  line-height: 14px;
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.menu__section--3 .mealAll .mealAnim .meal .price, .menu__section--2 .mealAll .mealAnim .meal .price, .menu__section--1 .mealAll .mealAnim .meal .price {
+  padding-top: 58px;
+  white-space: nowrap;
+  display: block;
+}
+
+.header__page .arrowImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .header__page .arrowImage {
+    height: 2em;
+  }
+}
+.header__page img {
+  margin-top: 1vh;
+  padding-top: 3vh;
+  margin-bottom: 2vh;
+}
+@media screen and (max-width: 768px) {
+  .header__page img {
+    height: 4vh;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+.header__page .arrow {
+  position: absolute;
+  font-size: 18px;
+  color: black;
+  left: 18%;
+}
+@media screen and (max-width: 768px) {
+  .header__page .arrow {
+    left: 30px;
+    font-size: 16px;
+  }
+}
+
+.reservation__button {
+  background-color: #9356DC;
+  height: 58px;
+  width: 15vw;
+  font-size: 18px;
+  min-width: 270px;
+  font-weight: 700;
+  color: white;
+  border: none;
+  border-radius: 40px;
+  margin-bottom: 6vh;
+  position: relative;
+  z-index: 1;
+}
+.reservation__button:hover::after {
+  opacity: 1;
+}
+.reservation__button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 40px;
+  background: radial-gradient(farthest-corner, #fface8 1%, #9052db 100%);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 250ms;
+}
+@media screen and (max-width: 768px) {
+  .reservation__button {
+    margin-top: 18px;
+    height: 34px;
+    font-size: 12px;
+    min-width: 172px;
+    font-weight: 700;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+  margin-top: -20px;
+  width: 100%;
+}
+.button__commande {
+  background-color: #9356DC;
+  height: 6vh;
+  width: 200px;
+  font-size: 24px;
+  color: white;
+  border: none;
+  border-radius: 40px;
+}
+@media screen and (max-width: 768px) {
+  .button__commande {
+    width: 50vw;
+    font-weight: 200;
+    font-size: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    z-index: 1;
+  }
+  .button__commande:hover::after {
+    opacity: 1;
+  }
+  .button__commande::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 40px;
+    background: radial-gradient(farthest-corner, #fface8 1%, #9052db 100%);
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 250ms;
+  }
+}
+
+.loaderBack {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 2;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-color: #9356DC;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: time 999999s 1s ease-in-out;
+}
+
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #FF79DA;
+  width: 120px;
+  height: 120px;
+  animation: spin 1s linear 1;
+}
+
+.reservation {
+  background-color: #f2f2f2;
+  text-align: center;
+}
+.reservation__localisation {
+  background-color: #e6e6e6;
+  min-height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: -2px 8px 5px -5px #bfbfbf inset;
+}
+.reservation .ville {
+  margin-left: 12px;
+}
+.reservation__title {
+  font-weight: 900;
+  font-size: 7vw;
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+}
+.reservation__p {
+  font-size: 3vw;
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media screen and (max-width: 768px) {
+  .reservation__p {
+    font-size: 4vw;
+    width: 90%;
+  }
+}
+.fonctionnement {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-weight: bold;
+  font-size: 13px;
+}
+.fonctionnement h2 {
+  align-self: flex-start;
+  margin-left: 6%;
+}
+@media screen and (max-width: 768px) {
+  .fonctionnement h2 {
+    margin-left: 2vw;
+  }
+}
 .restaurants {
   background-color: #f2f2f2;
   padding-left: 6%;
@@ -247,6 +504,7 @@ header {
   background-color: white;
   padding-bottom: 4px;
   margin-bottom: 22px;
+  box-shadow: 3px 3px 14px #bfbfbf;
 }
 .restaurants__blocImage--dessus {
   position: relative;
@@ -301,156 +559,8 @@ header {
   }
 }
 
-footer {
-  background-color: black;
-  color: white;
-  padding-left: 3%;
-  padding-top: 15px;
-  padding-bottom: 10px;
-  margin-bottom: 50px;
-}
-@media screen and (max-width: 768px) {
-  footer {
-    padding-left: 4%;
-    margin-bottom: 10px;
-    font-size: 18px;
-    line-height: 26px;
-    height: 170px;
-  }
-}
-footer .title {
-  margin-left: 40px;
-  margin-bottom: 0%;
-  font-family: shrikhand;
-}
-@media screen and (max-width: 768px) {
-  footer .title {
-    margin-left: 4%;
-  }
-}
-footer ul {
-  margin-top: 10px;
-  list-style: none;
-}
-footer ul .fas {
-  font-size: 10px;
-  padding-right: 4px;
-}
-@media screen and (max-width: 768px) {
-  footer ul {
-    padding-left: 0px;
-    margin-left: 4%;
-  }
-}
-
-.main_menu {
-  width: 80%;
-  margin-bottom: 10px;
-}
-
-@keyframes meal {
-  0% {
-    left: -100px;
-  }
-  100% {
-    transform: 0px;
-  }
-}
-.menu__section--3 .mealAll .mealAnim:nth-child(1), .menu__section--2 .mealAll .mealAnim:nth-child(1), .menu__section--1 .mealAll .mealAnim:nth-child(1) {
-  animation: progress-bar 150ms ease;
-  transform-origin: top;
-  animation-fill-mode: both;
-}
-.menu__section--3 .mealAll .mealAnim:nth-child(2), .menu__section--2 .mealAll .mealAnim:nth-child(2), .menu__section--1 .mealAll .mealAnim:nth-child(2) {
-  animation: progress-bar 150ms 300ms ease;
-  transform-origin: top;
-  animation-fill-mode: both;
-}
-.menu__section--3 .mealAll .mealAnim:nth-child(3), .menu__section--2 .mealAll .mealAnim:nth-child(3), .menu__section--1 .mealAll .mealAnim:nth-child(3) {
-  animation: progress-bar 150ms 450ms ease;
-  transform-origin: top;
-  animation-fill-mode: both;
-}
-.menu__section--3 .mealAll .mealAnim:nth-child(4), .menu__section--2 .mealAll .mealAnim:nth-child(4), .menu__section--1 .mealAll .mealAnim:nth-child(4) {
-  animation: progress-bar 150ms 600ms ease;
-  transform-origin: top;
-  animation-fill-mode: both;
-}
-.menu__section--3 .mealAll .mealAnim .meal, .menu__section--2 .mealAll .mealAnim .meal, .menu__section--1 .mealAll .mealAnim .meal {
-  display: flex;
-  flex-direction: row;
-  position: relative;
-  justify-content: space-between;
-  width: 94%;
-  margin-right: auto;
-  margin-left: auto;
-  box-shadow: 2px 2px grey;
-  padding-right: 5px;
-  padding-left: 5px;
-  border-radius: 10px;
-}
-.menu__section--3 .mealAll .mealAnim .meal .description, .menu__section--2 .mealAll .mealAnim .meal .description, .menu__section--1 .mealAll .mealAnim .meal .description {
-  width: 90%;
-}
-.menu__section--3 .mealAll .mealAnim .meal .description h3, .menu__section--2 .mealAll .mealAnim .meal .description h3, .menu__section--1 .mealAll .mealAnim .meal .description h3 {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  width: 100%;
-}
-.menu__section--3 .mealAll .mealAnim .meal .description p, .menu__section--2 .mealAll .mealAnim .meal .description p, .menu__section--1 .mealAll .mealAnim .meal .description p {
-  overflow: hidden;
-  line-height: 14px;
-  width: 100%;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.menu__section--3 .mealAll .mealAnim .meal .price, .menu__section--2 .mealAll .mealAnim .meal .price, .menu__section--1 .mealAll .mealAnim .meal .price {
-  padding-top: 58px;
-  white-space: nowrap;
-  display: block;
-}
-
 .meal__animation {
   visibility: hidden;
-}
-
-.header__page .arrowImage {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: auto;
-  margin-left: auto;
-  width: 100%;
-}
-@media screen and (max-width: 768px) {
-  .header__page .arrowImage {
-    height: 2em;
-  }
-}
-.header__page img {
-  margin-top: 1vh;
-  padding-top: 3vh;
-  margin-bottom: 2vh;
-}
-@media screen and (max-width: 768px) {
-  .header__page img {
-    height: 4vh;
-    margin-right: auto;
-    margin-left: auto;
-  }
-}
-.header__page .arrow {
-  position: absolute;
-  font-size: 18px;
-  color: black;
-  left: 18%;
-}
-@media screen and (max-width: 768px) {
-  .header__page .arrow {
-    left: 30px;
-    font-size: 16px;
-  }
 }
 
 .image__dessousHeader {
@@ -485,20 +595,6 @@ footer ul .fas {
   }
 }
 
-@keyframes progress-bar {
-  0% {
-    transform: scaley(0);
-  }
-  33% {
-    transform: scaley(0.66);
-  }
-  66% {
-    transform: scaley(0.99);
-  }
-  100% {
-    transform: scaley(1);
-  }
-}
 .menu {
   display: flex;
   flex-direction: column;
@@ -535,7 +631,7 @@ footer ul .fas {
 @media screen and (max-width: 768px) {
   .menu__BigTitle h1 {
     font-size: 6vw;
-    left: 4vw;
+    left: 5vw;
   }
 }
 .menu__section {
@@ -552,9 +648,9 @@ footer ul .fas {
   }
 }
 .menu__section--1 {
+  width: 80%;
   background-color: white;
   margin-bottom: 14px;
-  width: 80%;
   margin-left: 2%;
   margin-right: 2%;
   padding-left: 1%;
@@ -571,7 +667,7 @@ footer ul .fas {
   color: rgba(0, 0, 0, 0.596);
   padding-bottom: 1vw;
   border-bottom: solid 0.2em #99E2D0;
-  width: 10vw;
+  width: 7vw;
 }
 @media screen and (max-width: 768px) {
   .menu__section--1 {
@@ -589,9 +685,9 @@ footer ul .fas {
   }
 }
 .menu__section--2 {
+  width: 80%;
   background-color: white;
   margin-bottom: 14px;
-  width: 80%;
   margin-left: 2%;
   margin-right: 2%;
   padding-left: 1%;
@@ -608,7 +704,7 @@ footer ul .fas {
   color: rgba(0, 0, 0, 0.596);
   padding-bottom: 1vw;
   border-bottom: solid 0.2em #99E2D0;
-  width: 10vw;
+  width: 7vw;
 }
 @media screen and (max-width: 768px) {
   .menu__section--2 {
@@ -626,9 +722,9 @@ footer ul .fas {
   }
 }
 .menu__section--3 {
+  width: 80%;
   background-color: white;
   margin-bottom: 14px;
-  width: 80%;
   margin-left: 2%;
   margin-right: 2%;
   padding-left: 1%;
@@ -645,7 +741,7 @@ footer ul .fas {
   color: rgba(0, 0, 0, 0.596);
   padding-bottom: 1vw;
   border-bottom: solid 0.2em #99E2D0;
-  width: 10vw;
+  width: 7vw;
 }
 @media screen and (max-width: 768px) {
   .menu__section--3 {
@@ -660,51 +756,6 @@ footer ul .fas {
     padding-bottom: 2vw;
     border-bottom: solid 0.2em #99E2D0;
     width: 12vw;
-  }
-}
-
-.button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 20vh;
-  margin-top: -20px;
-  width: 100%;
-}
-.button__commande {
-  background-color: #9356DC;
-  height: 6vh;
-  width: 200px;
-  font-size: 24px;
-  color: white;
-  border: none;
-  border-radius: 40px;
-}
-@media screen and (max-width: 768px) {
-  .button__commande {
-    width: 50vw;
-    font-weight: 200;
-    font-size: 20px;
-    margin-right: auto;
-    margin-left: auto;
-    position: relative;
-    z-index: 1;
-  }
-  .button__commande:hover::after {
-    opacity: 1;
-  }
-  .button__commande::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    border-radius: 40px;
-    background: radial-gradient(farthest-corner, #fface8 1%, #9052db 100%);
-    opacity: 0;
-    z-index: -1;
-    transition: opacity 250ms;
   }
 }
 
@@ -724,26 +775,8 @@ footer ul .fas {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-  }
-  .menu__section--1 .mealAll .mealAnim:nth-child(1), .menu__section--2 .mealAll .mealAnim:nth-child(1), .menu__section--3 .mealAll .mealAnim:nth-child(1) {
-    animation: progress-bar 150ms ease;
-    transform-origin: top;
-    animation-fill-mode: both;
-  }
-  .menu__section--1 .mealAll .mealAnim:nth-child(2), .menu__section--2 .mealAll .mealAnim:nth-child(2), .menu__section--3 .mealAll .mealAnim:nth-child(2) {
-    animation: progress-bar 150ms 300ms ease;
-    transform-origin: top;
-    animation-fill-mode: both;
-  }
-  .menu__section--1 .mealAll .mealAnim:nth-child(3), .menu__section--2 .mealAll .mealAnim:nth-child(3), .menu__section--3 .mealAll .mealAnim:nth-child(3) {
-    animation: progress-bar 150ms 450ms ease;
-    transform-origin: top;
-    animation-fill-mode: both;
-  }
-  .menu__section--1 .mealAll .mealAnim:nth-child(4), .menu__section--2 .mealAll .mealAnim:nth-child(4), .menu__section--3 .mealAll .mealAnim:nth-child(4) {
-    animation: progress-bar 150mss 600ms ease;
-    transform-origin: top;
-    animation-fill-mode: both;
+    border-radius: 15px 15px;
+    box-shadow: 3px 3px 14px #bfbfbf;
   }
   @keyframes meal2 {
     0% {
@@ -761,6 +794,32 @@ footer ul .fas {
       width: 26%;
     }
   }
+  .menu__section--1 .mealAll .mealAnim:hover .meal, .menu__section--2 .mealAll .mealAnim:hover .meal, .menu__section--3 .mealAll .mealAnim:hover .meal {
+    animation: meal2 1.5s ease;
+    animation-fill-mode: both;
+    border-radius: 15px 0px 0px 15px;
+    margin-left: 0%;
+    margin-right: 0%;
+    cursor: pointer;
+  }
+  .menu__section--1 .mealAll .mealAnim:hover .meal__animation, .menu__section--2 .mealAll .mealAnim:hover .meal__animation, .menu__section--3 .mealAll .mealAnim:hover .meal__animation {
+    border-radius: 0px 15px 15px 0px;
+    width: 5vw;
+    visibility: visible;
+    background-color: #99E2D0;
+    animation: icone 1.5s ease;
+    animation-fill-mode: both;
+    margin-right: 0vw;
+    animation: rotateIcone 1.5s 2s left both;
+    cursor: pointer;
+  }
+  .menu__section--1 .mealAll .mealAnim:hover .meal__animation > .fas, .menu__section--2 .mealAll .mealAnim:hover .meal__animation > .fas, .menu__section--3 .mealAll .mealAnim:hover .meal__animation > .fas {
+    display: inline-block;
+    transform-origin: 0px left;
+    transform: rotate(360deg);
+    transition: transform 1.2s ease;
+    animation-fill-mode: both;
+  }
   .menu__section--1 .mealAll .mealAnim .meal, .menu__section--2 .mealAll .mealAnim .meal, .menu__section--3 .mealAll .mealAnim .meal {
     background-color: white;
     border-radius: 15px;
@@ -770,31 +829,6 @@ footer ul .fas {
     padding-left: 2vw;
     padding-right: 2vw;
     box-shadow: none;
-  }
-  .menu__section--1 .mealAll .mealAnim .meal:hover, .menu__section--2 .mealAll .mealAnim .meal:hover, .menu__section--3 .mealAll .mealAnim .meal:hover {
-    animation: meal2 1.5s ease;
-    animation-fill-mode: both;
-    border-radius: 15px 0px 0px 15px;
-    margin-left: 0%;
-    margin-right: 0%;
-    cursor: pointer;
-  }
-  .menu__section--1 .mealAll .mealAnim .meal:hover + .meal__animation, .menu__section--2 .mealAll .mealAnim .meal:hover + .meal__animation, .menu__section--3 .mealAll .mealAnim .meal:hover + .meal__animation {
-    border-radius: 0px 15px 15px 0px;
-    width: 5vw;
-    visibility: visible;
-    background-color: #99E2D0;
-    animation: icone 1.5s ease;
-    animation-fill-mode: both;
-    margin-right: 0vw;
-    animation: rotateIcone 1.5s 2s left both;
-  }
-  .menu__section--1 .mealAll .mealAnim .meal:hover + .meal__animation > .fas, .menu__section--2 .mealAll .mealAnim .meal:hover + .meal__animation > .fas, .menu__section--3 .mealAll .mealAnim .meal:hover + .meal__animation > .fas {
-    display: inline-block;
-    transform-origin: 0px left;
-    transform: rotate(360deg);
-    transition: transform 1.2s ease;
-    animation-fill-mode: both;
   }
   .menu__section--1 .mealAll .mealAnim .meal .description, .menu__section--2 .mealAll .mealAnim .meal .description, .menu__section--3 .mealAll .mealAnim .meal .description {
     width: 90%;
