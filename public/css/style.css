@@ -319,6 +319,8 @@ footer ul a {
   border-radius: 40px;
   margin-bottom: 6vh;
   position: relative;
+  box-shadow: 0.5px 0.5px 12px #9356DC;
+  cursor: pointer;
   z-index: 1;
 }
 .reservation__button:hover::after {
@@ -365,6 +367,8 @@ footer ul a {
   color: white;
   border: none;
   border-radius: 40px;
+  box-shadow: 0.5px 0.5px 12px #9356DC;
+  cursor: pointer;
 }
 @media screen and (max-width: 768px) {
   .button__commande {

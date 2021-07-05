@@ -13,6 +13,8 @@
     border-radius: 40px;
     margin-bottom: 6vh;
     position: relative;
+    box-shadow: 0.5px 0.5px 12px $colour-primary;
+    cursor: pointer;
     z-index: 1;
     &:hover {
         &::after {
@@ -61,6 +63,8 @@
      color:white;
      border: none;
      border-radius: 40px;
+     box-shadow: 0.5px 0.5px 12px $colour-primary;
+     cursor: pointer;
      @include mobile-only{
        width: 50vw;
        font-weight:200;
