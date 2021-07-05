@@ -21,14 +21,6 @@
     transform: scaleY(1);
   }
 }
-@keyframes meal {
-  0% {
-    left: -100px;
-  }
-  100% {
-    transform: 0px;
-  }
-}
 @keyframes time {
   0% {
     position: absolute;
@@ -130,6 +122,7 @@ footer ul a {
   margin-bottom: 20px;
   box-shadow: 3px 3px 14px #bfbfbf;
   z-index: 1;
+  cursor: pointer;
 }
 .fonctionnement__bloc:hover::after {
   opacity: 1;
@@ -807,10 +800,8 @@ footer ul a {
     width: 5vw;
     visibility: visible;
     background-color: #99E2D0;
-    animation: icone 1.5s ease;
-    animation-fill-mode: both;
+    animation: icone 1.5s ease both;
     margin-right: 0vw;
-    animation: rotateIcone 1.5s 2s left both;
     cursor: pointer;
   }
   .menu__section--1 .mealAll .mealAnim:hover .meal__animation > .fas, .menu__section--2 .mealAll .mealAnim:hover .meal__animation > .fas, .menu__section--3 .mealAll .mealAnim:hover .meal__animation > .fas {

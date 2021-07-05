@@ -1,4 +1,6 @@
 
+
+//bouton d'accueil pour explorer les restaurtants 
 %buttonExploreRestarants{
     background-color: $colour-primary;
     height: 58px;
@@ -43,7 +45,7 @@
   
   }
 
-
+//bouton de menu pour commander
 .button{ 
     display: flex;
    justify-content: center;

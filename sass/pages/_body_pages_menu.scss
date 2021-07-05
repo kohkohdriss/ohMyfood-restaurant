@@ -1,3 +1,4 @@
+//image dans le menu qui se trouve sous l'entet 
 .image__dessousHeader{
     @include marginLR;
     display: flex;
@@ -25,7 +26,7 @@
 }
 }
 
-
+//menu 
 .menu{
     display: flex;
     flex-direction: column;
@@ -149,10 +150,8 @@
         width: 5vw;
         visibility: visible;
         background-color: $colour-tertiary;
-        animation: icone 1.5s  ease;
-        animation-fill-mode: both;
+        animation: icone 1.5s  ease both;        
         margin-right: 0vw;
-        animation: rotateIcone 1.5s 2s  left both;
         cursor: pointer;
         & > .fas{
         display: inline-block;

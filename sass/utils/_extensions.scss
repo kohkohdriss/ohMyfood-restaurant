@@ -1,3 +1,4 @@
+//bloc de fonctionnment dans la page d'accueil
 %bloc__focntionnement{
   height: 60px;
   width:70vw;
@@ -11,6 +12,7 @@
   margin-bottom:20px;
   box-shadow: 3px 3px 14px $colour-senary;
   z-index: 1;
+  cursor: pointer;
   &:hover {
     &::after {
         opacity: 1;
