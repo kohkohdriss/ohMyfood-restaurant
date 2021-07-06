@@ -51,3 +51,19 @@
         100% { transform: rotate(360deg);
         }
       }
+
+
+      @keyframes meal2 {
+        0% {
+          width: 95%;
+          
+        }
+        100%{
+         width:69%;
+          
+        }
+      }
+    @keyframes icone {
+      0%{ width: 0px; }
+      100%{width: 26%;}
+       }

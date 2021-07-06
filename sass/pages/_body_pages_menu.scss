@@ -115,56 +115,32 @@
         border-radius: 15px 15px;
         box-shadow: 3px 3px 14px $colour-senary;
   
-       @keyframes meal2 {
-        0% {
-          width: 95%;
-          
-        }
-        100%{
-         width:69%;
-          
-        }
-      }
-    @keyframes icone {
-      0%{
-        width: 0px;
-       
-      }
-      100%{
-        width: 26%;
-      }
-      
-    }
+
     &:hover{
       .meal{
-        animation: meal2 1.5s  ease;
-                animation-fill-mode: both;
-                border-radius: 15px 0px 0px 15px;
-                margin-left: 0%;
-                margin-right: 0%;
+          animation: meal2 1.5s  ease;
+          animation-fill-mode: both;
+          border-radius: 15px 0px 0px 15px;
+          margin-left: 0%;
+          margin-right: 0%;
+          cursor: pointer;
+      }
+              .meal__animation{
+                border-radius: 0px 15px 15px 0px;
+                width: 5vw;
+                visibility: visible;
+                background-color: $colour-tertiary;
+                animation: icone 1.5s  ease both;        
+                margin-right: 0vw;
                 cursor: pointer;
-  
-      }
-      .meal__animation{
-        border-radius: 0px 15px 15px 0px;
-        width: 5vw;
-        visibility: visible;
-        background-color: $colour-tertiary;
-        animation: icone 1.5s  ease both;        
-        margin-right: 0vw;
-        cursor: pointer;
-        & > .fas{
-        display: inline-block;
-        transform-origin: 0px left;
-        transform: rotate(360deg);
-        transition: transform 1.2s  ease;
-        animation-fill-mode: both; 
-        } 
-        
-      }
-  
-    }
-    
+                & > .fas{
+                display: inline-block;
+                transform-origin: 0px left;
+                transform: rotate(360deg);
+                transition: transform 1.2s  ease;
+                }  
+           }
+       }
              .meal{
                background-color: white;
                border-radius: 15px;
@@ -194,7 +170,7 @@
                  }
                }
                .price{
-                 position:absolute;
+               position:absolute;
                padding-top: 47px;
                padding-right: 0px;
                padding-left: 0px;
