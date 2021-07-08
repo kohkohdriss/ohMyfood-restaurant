@@ -2,7 +2,7 @@
 
 //bouton d'accueil pour explorer les restaurtants 
 %buttonExploreRestarants{
-    background-color: $colour-primary;
+     background: linear-gradient(to bottom ,lighten($colour-secondary,8) 4%, darken($colour-primary, 1) 100%);
     height: 58px;
     width: 15vw;
     font-size: 18px;
@@ -16,6 +16,7 @@
     box-shadow: 0.5px 0.5px 12px $colour-primary;
     cursor: pointer;
     z-index: 1;
+    opacity: 1;
     &:hover {
         &::after {
             opacity: 1;
@@ -29,7 +30,7 @@
         bottom: 0;
         left: 0;
         border-radius: 40px;
-        background: radial-gradient(farthest-corner, lighten(#FF79DA,10) 1%, darken($colour-primary, 1) 100%);
+        background: linear-gradient(to top ,lighten($colour-secondary,8) 6%, darken($colour-primary, 1) 100%);
         opacity: 0;
         z-index: -1;
         transition: opacity 250ms;
@@ -56,7 +57,7 @@
    margin-top: -20px;
    width:100%;
    &__commande{
-   background-color: $colour-primary;
+    background: linear-gradient(to bottom ,lighten($colour-secondary,8) 4%, darken($colour-primary, 1) 100%);
      height: 6vh;
      width: 200px;
      font-size: 24px;
@@ -65,6 +66,26 @@
      border-radius: 40px;
      box-shadow: 0.5px 0.5px 12px $colour-primary;
      cursor: pointer;
+     position: relative;
+     z-index: 1;
+     &:hover {
+         &::after {
+             opacity: 1;
+     }
+ }
+     &::after {
+         content: "";
+         position: absolute;
+         top: 0;
+         right: 0;
+         bottom: 0;
+         left: 0;
+         border-radius: 40px;
+         background: linear-gradient(to top ,lighten($colour-secondary,8) 4%, darken($colour-primary, 1) 100%);
+         opacity: 0;
+         z-index: -1;
+         transition: opacity 250ms;
+     }
      @include mobile-only{
        width: 50vw;
        font-weight:200;
@@ -85,7 +106,7 @@
            bottom: 0;
            left: 0;
            border-radius: 40px;
-           background: radial-gradient(farthest-corner, lighten(#FF79DA,10) 1%, darken($colour-primary, 1) 100%);
+           background: linear-gradient(to top ,lighten($colour-secondary,8) 4%, darken($colour-primary, 1) 100%);
            opacity: 0;
            z-index: -1;
            transition: opacity 250ms;

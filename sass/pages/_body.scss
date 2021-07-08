@@ -13,15 +13,22 @@
     }
     .ville{
     margin-left:12px;
+    font-size:22px;
+    @include mobile-only{
+      font-size:16px;
+    }
     }
     &__title{
       font-weight:900;
-     font-size: 7vw;
-     width: 80%;
+     font-size: 3vw;
+     width: 60%;
     @include marginLR;
+    @include mobile-only{
+      font-size: 19px;
+    }
     }
     &__p{
-      font-size: 3vw;
+      font-size: 1.8vw;
       width: 90%;
       @include marginLR;
       @include mobile-only{
@@ -51,8 +58,12 @@
   h2{
    align-self: flex-start;
    margin-left: 6%;
+   font-size:28px;
    @include mobile-only{
     margin-left: 2vw;
+    font-size: 20px;
+    font-weight: bold;
+    
   }
   }
  
@@ -80,8 +91,10 @@
           h2{
             margin-left: 0%;
             margin-bottom: 20px;
+            font-size: 28px;
             @include mobile-only{
               margin-bottom: 17px;
+              font-size: 20px;
             }
           }
           &__blocImage{
@@ -89,16 +102,21 @@
                         background-color: white;
                         padding-bottom: 4px;
                         margin-bottom: 22px;
+                        @include marginLR;
+                        width: 80%;
                         box-shadow: 3px 3px 14px $colour-senary;
+                        @include mobile-only{
+                          width: 100%;
+                        }
                        &--dessus{
                            position: relative;
                            .image{
                             border-radius: 20px 20px 0  0  ;
                             width: 100%;
-                            height:25em;
+                            height:20em;
                             object-fit:cover;
                             @include mobile-only{
-                            height: 140px;
+                            height: 120px;
                             width:100%;
                             object-fit:cover;
                             }
@@ -108,13 +126,18 @@
                                 position: absolute;
                                 background-color: $colour-tertiary;
                                 padding: 3px 5px;
-                                font-size: 13px;
+                                font-size: 18px;
+                                width: 5em;
                                 right: 30px;
+                                text-align: center;
                                 top: 30px;
-                                color:rgb(39, 169, 128); 
+                                color:rgb(17, 128, 93); 
                                 @include mobile-only{
                                   right: 10px;
                                   top: 10px;
+                                  font-size: 13px;
+                                  width: 4em;
+                                  text-align: center;
                                 }
                                   }
                              }
@@ -130,12 +153,19 @@
                                 }
                                 .title_p{
                                   line-height: 6px;
-                                  font-size: 13px;
+                                  font-size: 18px;
                                   @include mobile-only{
                                     margin-left:-20px;
+                                    font-size: 13px;
                                      }
-                                  
-                                  
+                                }
+                                .heart{
+                                  font-size: 25px;
+                                  margin-right: 20px;
+                                  @include mobile-only{
+                                  font-size: 20px;
+                                  margin-right: 0%;
+                                  }
                                 }
                                    }
                        }

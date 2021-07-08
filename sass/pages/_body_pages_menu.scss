@@ -9,10 +9,11 @@
     margin-bottom: -4vw;
     }
     img{
- width: 65vw;
- height: 35vw;
+ width: 70%;
+ max-width: 70em;
+ max-height: 20em;
  border-radius: 20px;
- object-fit:fill; 
+ object-fit:cover; 
  margin-top: 25px;
  @include mobile-only{
   width: 100%;
@@ -55,6 +56,7 @@
         position: absolute;
         left: 8vw;
         font-family: shrikhand;
+        font-size: 40px;
         @include mobile-only{
           font-size: 6vw;
           left: 5vw;
@@ -72,16 +74,18 @@
           flex-direction: column;
           width: 100%;
     }
+    //section Entrées
       &--1{
         @include smallSectionDescription;
         @extend %descriptionPrice;
      
-  }
+  }   
+    //section Plats
       &--2{
         @include smallSectionDescription; 
         @extend %descriptionPrice;
       
-      
+    //section Desserts
       }
       &--3{
         @include smallSectionDescription;
@@ -110,6 +114,7 @@
         position: relative;
         margin-bottom: 10px;
         width: 100%;
+        height: 75px;
         margin-left: auto;
         margin-right: auto;
         border-radius: 15px 15px;
@@ -147,6 +152,7 @@
                width:auto;
                margin-right:auto;
                margin-left: auto;
+               margin-bottom: 0px;
                padding-left: 2vw;
                padding-right: 2vw;              
                box-shadow: none;
@@ -156,15 +162,15 @@
                  h3{
                    overflow: hidden;
                      text-overflow: ellipsis;
-                    
                      width: 100%;
                      font-size: 15px;
+                     line-height: 16px;
                  }
                  p{
                    overflow: hidden;
                    width: 100%;
                    font-size: 14px;
-                   line-height: 15px;
+                   line-height: 16px;
                    text-overflow: ellipsis;
                    
                  }
