@@ -15,7 +15,8 @@
   z-index: 1;
   cursor: pointer;
   @include mobile-only{
-    font-size:13px;
+    font-size:14px;
+    font-weight: 900;
     height: 60px;
   }
   &:hover {
