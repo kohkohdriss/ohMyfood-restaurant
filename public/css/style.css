@@ -18,7 +18,7 @@
     transform-origin: bottom;
   }
   100% {
-    transform: scaleY(1);
+    transform: scale(1);
   }
 }
 @keyframes time {
@@ -222,54 +222,68 @@ footer ul a {
 .restaurants__blocImage--dessous .heart {
   position: relative;
   right: 10px;
+  bottom: 10px;
+  cursor: pointer;
 }
-.restaurants__blocImage--dessous .heart .far {
-  position: absolute;
+.restaurants__blocImage--dessous .heart:hover .fa {
+  animation: heartColor 1.5s ease-out both;
+  opacity: 1;
+  color: #9356DC;
   z-index: 1;
+}
+.restaurants__blocImage--dessous .heart:hover .far {
+  position: absolute;
+  z-index: 0;
+  color: #9356DC;
 }
 .restaurants__blocImage--dessous .heart .fa {
   position: absolute;
   color: white;
-  z-index: 1;
-  cursor: pointer;
-  opacity: 0;
+  z-index: -1;
 }
-.restaurants__blocImage--dessous .heart .fa:hover {
-  z-index: 1;
-  cursor: pointer;
-  color: #9356DC;
-  animation: heartColor 1.5s ease-out;
-  opacity: 0.9;
+.restaurants__blocImage--dessous .heart .far {
+  position: absolute;
 }
 
 .menu__BigTitle .heart {
   position: absolute;
   right: 11vw;
-  bottom: 70px;
-  font-size: 30px;
+  bottom: 43px;
+  cursor: pointer;
 }
 @media screen and (max-width: 768px) {
   .menu__BigTitle .heart {
-    right: 62px;
-    bottom: 38px;
+    bottom: 3.3vw;
+    cursor: pointer;
+  }
+}
+.menu__BigTitle .heart:hover .fa {
+  animation: heartColor 1.5s ease-out both;
+  opacity: 1;
+  color: #9356DC;
+  z-index: 1;
+}
+.menu__BigTitle .heart:hover .far {
+  z-index: 0;
+  color: #9356DC;
+}
+.menu__BigTitle .heart .fa {
+  color: white;
+  font-size: 40px;
+}
+@media screen and (max-width: 768px) {
+  .menu__BigTitle .heart .fa {
     font-size: 24px;
   }
 }
 .menu__BigTitle .heart .far {
   position: absolute;
-  z-index: 0;
+  font-size: 40px;
 }
-.menu__BigTitle .heart .fa {
-  position: absolute;
-  z-index: 1;
-  cursor: pointer;
-  opacity: 0;
-}
-.menu__BigTitle .heart .fa:hover {
-  z-index: 1;
-  color: #9356DC;
-  animation: heartColor 1.5s ease-out;
-  opacity: 0.9;
+@media screen and (max-width: 768px) {
+  .menu__BigTitle .heart .far {
+    font-size: 24px;
+  }
 }
 
 .menu__section--3 .mealAll, .menu__section--2 .mealAll, .menu__section--1 .mealAll {
