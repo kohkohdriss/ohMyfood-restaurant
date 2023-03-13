@@ -1,6 +1,6 @@
 # ![left 100%](https://raw.githubusercontent.com/kohkohdriss/archive/main/images/Logo_OpenClassrooms.png) OpenClassrooms-Développeur Web
 
-_`Début de formation le Avril/2021`_
+_`Début de formation Avril/2021`_
 
 ## Auteur
 
@@ -19,7 +19,7 @@ _`Début de formation le Avril/2021`_
 
 ### ![left 50%](images/icons8.png) Construire un site pour pouvoir afficher les différents menus
 
-Site : [Hébergé sur GitHub](https://github.com/kohkohdriss/kohkohDriss_3_04042020.git "Cliquez pour voir le site")
+Site : [Hébergé sur GitHub](https://github.com/kohkohdriss/ohMyfood-restaurant.git "Cliquez pour voir le site")
 
 Voir : [Le projet sur OpenClassrooms](https://openclassrooms.com/fr/projects/637/assignment/ "Cliquez pour voir le projet")
 
